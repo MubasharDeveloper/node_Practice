@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students</title>
+</head>
+<body>
+  <h1>Student List</h1>
+  <ul>
+    <% students.forEach(student => { %>
+      <li><%= student._id %> - <%= student.name %> - <%= student.email %> - <%= student.department || 'N/A' %></li>
+    <% }) %>
+  </ul>
+
+  <br><br>
+
+  <form action="/students" method="post">
+    <input type="text" name="name" placeholder="Enter Name" />
+    <br><br>
+    <input type="email" name="email" placeholder="Enter Email" />
+    <br><br>
+    <select name="department" id="">
+      <option value="Computer">Computer</option>
+      <option value="Math">Math</option>
+    </select>
+    <br><br>
+    <button type="submit">submit</button>
+  </form>
+</body>
+</html>
