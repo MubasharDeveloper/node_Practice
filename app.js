@@ -24,3 +24,5 @@ connectDB().then(() => {
     console.log(`🚀 Server running on http://localhost:${port}`);
   });
 });
+
+export default app; // <<-- IMPORTANT: export the app
