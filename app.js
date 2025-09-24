@@ -2,8 +2,6 @@ import express from "express";
 import morgan from "morgan";
 import studentRoutes from "./routes/studentRoutes.js";
 import { connectDB } from "./config.js";
-import ServerlessHttp from "serverless-http";
-
 const app = express();
 const port = 4000;
 
